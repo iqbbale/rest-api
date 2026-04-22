@@ -1,0 +1,22 @@
+[
+  {
+    "nama": "iqbal",
+    "umur": 18,
+    "nim": "e41253039",
+    "hoby": ["coding", "trading"],
+    "pembimbing": {
+      "pembimbing1": "pak aji",
+      "pembimbing2": "pak ery"
+    }
+  },
+  {
+    "nama": "iqbal",
+    "umur": 18,
+    "nim": "e41253039",
+    "hoby": ["coding", "trading"],
+    "pembimbing": {
+      "pembimbing1": "pak aji",
+      "pembimbing2": "pak ery"
+    }
+  }
+]

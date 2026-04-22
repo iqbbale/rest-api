@@ -1,0 +1,48 @@
+# file ini hanya berfungi untuk menguji API kita
+# jika API kita selesai maka nanti boleh di hapus file ini
+# dengan 3 tanda pagar di atas ini maka akan dibedakan antara method post dan get dan bisa untuk memencet ke 2nya
+
+# untuk melakukan pengujian maka lakukan ini
+GET http://localhost:3000/product
+
+###
+GET http://localhost:3000/product/69b1015da81fa6784356157b
+
+# jika muncul dengan status 200 dan juga dijalankan maka itu route kita berjalan dengan baik
+
+###
+# untuk mengambil req post
+POST http://localhost:3000/product
+Content-Type: application/json
+
+# harus ada spasi antara itu content type dan data yang di tambahkan
+# {
+#     "title" : "Product 1",
+#     "price" : 30000
+# }
+
+# {
+#     "title" : "Product 2",
+#     "price" : 20000
+# }
+{
+    "title" : "Product 3",
+    "price" : 80000
+}
+// dalam json tidak boleh langsung 2 yang di kirimkan melainkan harus satu satu dulu
+
+###
+// disitu akan muncul message data tidak di temukan karena data dengan ID tersebut sudah saya delete
+// yang mana yang di delete itu data yang ke 3 di atas itu
+PATCH http://localhost:3000/product/69b105659006b0c1691ada11
+Content-Type: application/json
+
+{
+    "title" : "Product Updated",
+    "price" : 9000
+}
+
+###
+// disitu akan muncul message data tidak di temukan karena data dengan ID tersebut sudah saya delete
+// yang mana yang di delete itu data yang ke 3 di atas itu
+DELETE http://localhost:3000/product/69b105659006b0c1691ada11

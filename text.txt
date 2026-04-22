@@ -1,0 +1,191 @@
+API
+API = Application Progaming Interface 
+
+apa itu API? 
+Api itu adalah sekuumpulan fungsi, subroutine, protokol komunikasi, atau kakas / tools untuk membuat prangkat lunak 
+API(Application Progaming Interface)
+Interface = itu bagian yang sama antara 2/lebih komponen terpisah pada sebuah sistem computer (itu merupakan bagian yang sama yang saling terhubung satu sama lain)
+
+GUI(graphical user interface) = yang ada di Windows
+
+API : 
+1. Antarmuka yang berupah kumpulan fungsi yang dapat dipangil atau dijalankan oleh programlain
+2. Penerapannya sangat luas = bahasa pemrograman,library/framework sistem operasi, web API / WEB service
+
+contoh2nya ada di gambar Scrensoot
+API itu banyaa yahh jangan bingung intinya dari API itu adalah ( bagian yang sama antara 2/lebih komponen terpisah pada sebuah sistem )
+
+Terus ada namanya
+WEB API / WEB SERVICE
+SOAP ( Simple Object Access Protocol )
+REST ( REpresentational State Transfer )
+
+jika Anda mengambil data pengguna melalui GET/users/1 itu adalah REST API, 
+jika Anda menggunakan sistem yang memerlukan format XML yang komplex dengan protokol SOAP, itu adalah WEB API
+
+Terminologi
+WEB API / WEB SERVICE
+" adalah sebuah sistem perangkat lunak yang dibuat untuk mendukung interoperabilitas / interaksi antar 2 aplikasi yang berbeda melalui jaringan " ( biasnya nanti jaringanyna mengunakan http protocolnya )
+selama pertukarannya lewat http kita bisa buatkan WEB SERVICE di tengah2nya
+
+jika kita membuat web applicationsnya saja yang mana terkonek ke db, maka nanti akan bisa di gunakan dengan bahasa apa saja untuk mengunakan db tersebut ga peduli bahasanya teknologinya apa sitem oprasinya apa kita tetap dapat terkonek secara langsung. tetapi harus mengunakan sebuah "WEB SERVICE / REST API"
+
+WEB API dan WEB SERVICE berbeda dalam cakupan dan flexibilitas, 
+WEB API adalah antarmuka umum untuk interaksi applikasi (bisa lokal /jaringan, format JSON/XML)
+sedangkan WEB SERVICE adalah subset khusus API yang wajib mengunakan jaringan (HTTP) dan standart ketat seperti SOAP
+semua web service adalah API namun tidak semua API adalah web server
+
+
+kita pelajari nanti :
+Apa itu REST API , JSON ( membuat & mengakses ), PUBLIC API ( simple / complex authentikasi), Mebuat REST server kita
+
+hal yang harus kamu pelajari sebuah belajar REST : 
+1. js
+2. object
+3. DOM
+4. PHP dasar
+
+
+REST & HTTP
+
+Apa itu REST API 
+" itu adalah gaya arsiktektural perangkat lunak yang di dalamnya mendefinisikan aturan2 untuk membuat web service "
+REST API itu adalah style saja gaya coding saja jadi bukan aturan baku ataupun standart , walaupun ga mengikuti cara didalamnya nanti tetap jalan kok, 
+API itu ada dimana2 bisa di akses siapapun
+
+jadi API bisa digunakan sebagai bisnis
+misal saya mau tf dari mandiri ke bca kan pasti ada pajaknya misal 2rb, jika ada yang trnasfer maka kita akan bisa membuat bisnis lewat situ 
+
+angap gini :
+API itu penghubungnya
+REST API adalah aturannya
+ada Req & Res
+data yang dikirim/ diterima berupa JSON
+
+REST API
+REpresentasional State Transfer
+Gaya perancangan / Architectural Style
+Stateless
+By Roy Fielding, disertasi PhD-nya
+Protocolnya hampir selalu mengunakan HTTP
+Memungkinkan interaksi antar mesin
+
+
+HTTP = Hypertext Trasfer Protocol
+URL = Uniform Resource Locator ( ini adalah sebuah alamat yang memperoses sumber daya, yang macam2, bisa html bisa gambar bisa script dll, yang dapat di akses lewat internet )
+XML = Extensible Markup Language
+
+REST Client bisa macam2 bisa laptop, hp, web application, dll, bisa juga smart home
+semua bisa mengakses 
+Kode status itu 
+200 - success
+404 - not found
+500 - server error
+
+kenapa butuh kode status?
+karena yang mengobrol itu mesin dengan mesin bukan manusia
+kalo kita manusia mengakses url yang gajelas, maka sistem akan mengirimkan code 404, kita bisa memikir kalo itu adalah salah, jika mesin ga tahu maka harus kita setting agar tahu error nya apa dan apa, mangkanya penting untuk tahu status code
+
+
+nanti kita merequest pakai format json, bukan html bukan text tapi json
+
+bedanya RESTful & REST
+HTTP Method/verbs
+Get : mengambil data
+Post : menambah data
+Put : mengubah data ( ini khusus )
+Delete : menghapus data
+kita tida bisa melakukan put & delete secara langsung lewat browser
+
+REST = hanya get & post
+jika RESTFUL  = itu get post put delete
+
+stateless : 
+setiap request http dlakukan secara terisolasi
+server tidak menyimpan state apapun mengenai sesi dari client
+setiap request dari client harus berisi semua informasi yang dibutuhkan server, termasuk informasi otentikasi
+URI / endpoints-nya mengunakan kata benda, bukan kata kerja, jadi di belakangnya itu tidak boleh ada kata misal delete put dll di urlnya contoh "http://contact/delete" ini ga boleh yang hanua boleh itu "http://contact"
+restful api harus stateless, mengunakan rest secara benar 
+
+
+JSON : 
+apa itu json? 
+json adalah sebuah file format standart yang mengunakan tulisan yang dapat dibaca oleh manusia untuk pertukaran data yang di dalamnya berisi pasangan antara key dan value
+
+Json itu format pertukaran data tekstual yang sangat ringan sintaks sangat sederhana dan jelas dibanding (XML)
+dapat digunakan pada beragam bahasa pemrograman
+tiap bahasa pemrograman memiliki cara sendiri untuk berinteraksi dengan JSON
+
+Json di buat berdasarkan format object pada js
+digunakan untuk file konfigurasi(tidak disarankan) karena tidak suport syntax komentar
+Tipe file JSON memiliki ekstensi .json
+Fortmat JSON dibuat dan diusulkan oleh Douglas crockford
+
+jika mau mencari tahu bedanya XML & JSON LIAT DI SCRENSOT
+
+Object itu adalah sebuah kumpulan property dan propertynya ditulis dalam pasangan key dan value
+
+JSON itu tida boleh ada method, hanya boleh key & value
+
+key selalu dibungkus "",
+jika value : bolean, array, string, object dalam object, Number, Null
+Singkat menjadi : BASONN,
+agar json type datanya basonn
+
+dalam json tidak bisa sebuah data itu 2, hanya bisa dilakukan ketika data tersebut dikonfigurasi ke dalam array
+
+jika mengunakan json di luar domain, atau luar drive
+itu ada yang namanya same-origin policy 
+kebijakan browser untuk mengakses dan menampilkan / script / document dari tempat lain diluar domainnya
+membuat kita tidak bisa mengakses data (.json) dari luar domain / website kita
+nanti ada penolakan yang namanya CORS
+CORS ( Cross Origin Resource Sharing ), ini adalah mekanisme yang membuat kita dapat mengakses sebuah resource (data,document,script) dari domain lain
+caranya adalah ubah konfigurasi server memperbolehkan adanya akses data luar domain
+modifikasi Access-Control-Allow-Origin
+membuat file (.htaccess)
+buat file di dalamnya seperti ini :
+<IfModule mod_headers.c>
+	Header set Access-Control-Allow-Origin "*"
+</IfModule>
+ini akan kepakai ketika bikin rest servernya
+
+Public API / REST API yang dimiliki orang lain
+tapi sama saja nanti hasilnya tetap JSON tapi JSONnya hasil dari generate ke Public API
+Public API === Open API
+
+Definisi Public API :
+itu adlah sebuah API(REST API) yang dapat dikses secara public, yang di dalamnya tersedia aturan untuk developer agar dapat mengakses data
+jadi developer2 yang ada di luar aplikasi itu bisa terhubung dengan aturan2 REST API tersebut
+jadi kita bisa membuat data ynag mana dimiliki oleh aplikasi orang lain
+tapi biasanya ada biayanya jika kita mengambil API 
+
+public API itu banya banget salah satunya kalian bisa cari di :
+https://any-api.com
+https://github.com/toddmotto/public-apis
+https://github.com/farizdotid (API milik ornag indo)
+
+kita juga harus tahu otentikasi karena ga semua API bisa digunakan secara bebas 
+tanpa ontetikasi itu kita bebas bisa mengakses apapun 
+makanya ada key/token dalam mengakses API, biasanya ada batasnya karena jika tidak ada batasnya akan menguras server mereka
+dan ada OAuth ini adalah ketika misal login via fb/dll
+
+dan ada aturan jadi ga bisa sembarangan mengakses, dan biasanya ada sebuah documentasinya
+CORS (Cross Origin Resource Sharing)
+
+POSTMAN ITU UNTUK MENGECEK/ test mengunakan postman
+untuk mengecek apakah API  itu berjalan dengan baik jika sudah berjalan mari kita buat applicationnya
+
+
+
+cara ambil url dari yt itu dengan liat di
+URL nya videonya
+semisal ini
+https://www.youtube.com/watch?v=-BmTKA1xCm8&t=795s
+ambil yang "-BmTKA1xCm8" dan pindahkan ke ara iframe jika mau ditampilkan
+
+ini API ku dari akun makemoneyiteasy pada web developer Google untukkonek ke youtube
+"AIzaSyCDi5Xx7Ap_me65Ndh3DlDa0qJRZsQC-GQ"
+
+endspoint itu adalah ujung API atau apa yang di ambil
+
+Membuat REST Server sendiri (RESTful API)
